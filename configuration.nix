@@ -9,6 +9,8 @@
     [
       ./hardware-configuration.nix
       ./zsh.nix
+      ./hyprland.nix
+      ./ai.nix
     ];
 
   # Bootloader.
@@ -110,7 +112,7 @@
     };
   };
   # Open ports in the firewall.
-  networking.firewall.allowedTCPPorts = [ 22 ];
+  networking.firewall.allowedTCPPorts = [22 80 8080 443];
   # networking.firewall.allowedUDPPorts = [ ... ];
   # Or disable the firewall altogether.
   # networking.firewall.enable = false;
